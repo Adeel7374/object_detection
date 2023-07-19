@@ -14,7 +14,7 @@ class CameraView extends StatelessWidget {
         builder: (controller) {
           return controller.isCameraInitialized.value
               ? CameraPreview(controller.cameraController)
-              : const Text("Loading Preview");
+              : const Center(child: Text("Loading Preview..."));
         },
       ),
     );

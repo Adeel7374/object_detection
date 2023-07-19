@@ -20,7 +20,10 @@ class ScanController extends GetxController {
   late CameraController cameraController;
   late List<CameraDescription> cameras;
 
+  late CameraImage cameraImage;
+
   var isCameraInitialized = false.obs;
+  var cameraCount = 0;
 
   initCamera() async {
     if (await Permission.camera.request().isGranted) {
@@ -32,5 +35,9 @@ class ScanController extends GetxController {
     } else {
       print("Permission denied");
     }
+  }
+
+  onjectDetector() async {
+    // var detector = await tflite
   }
 }
